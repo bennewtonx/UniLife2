@@ -1,0 +1,58 @@
+/* Default styles for desktop */
+.footer-container {
+    height: 97px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+  }
+  
+  .left-side button {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: none;
+    opacity: 60%;
+  }
+  
+  .right-side {
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    border: none;
+    opacity: 60%;
+  }
+  
+  .right-side p {
+    margin: 0 30px;
+  }
+  
+  /* Media query for tablets */
+  @media screen and (max-width: 768px) {
+    .footer-container {
+      padding: 0 20px; /* Reduce horizontal padding for tablets */
+    }
+  
+    .right-side p {
+      display: none; /* Hide the paragraph text on tablets */
+    }
+  }
+  
+  /* Media query for mobile devices */
+  @media screen and (max-width: 480px) {
+    .footer-container {
+      height: auto; /* Adjust height as needed for mobile devices */
+      padding: 10px; /* Add padding for spacing */
+      flex-direction: column; /* Stack elements vertically */
+      text-align: center; /* Center-align content */
+    }
+  
+    .left-side button {
+      margin-bottom: 10px; /* Add margin to separate the button from other content */
+    }
+  
+    .right-side {
+      margin-top: 10px; /* Add margin to separate the right-side content from other content */
+    }
+  }
+  

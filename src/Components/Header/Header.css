@@ -1,0 +1,166 @@
+.header-container {
+    height: 60px;
+    background-color: #00A2E1;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10vh;
+  }
+  
+  .hide-on-mobile {
+    display: none;
+  }
+  
+  .mobile-menu-icon {
+    display: none;
+  }
+  
+  .icon-logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .icon-logo svg {
+    font-size: 5vh;
+    color: #FFFFFF;
+    margin-right: 1vh;
+  }
+  
+  .icon-logo a {
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    font-size: 5vh;
+    color: #FFFFFF;
+  }
+  
+  .header-buttons a {
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    margin-left: 5vh;
+    font-size: 2vh;
+    color: #FFFFFF;
+  }
+  
+  .contact-us-modal-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    border: none;
+    border-radius: 24px;
+    background-color: #FFFFFF;
+    padding: 10px
+  }
+  
+  
+  .contact-us-modal-title-container {
+    width: 936px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  
+  .contact-us-modal-input {
+    height: 104px;
+    width: 303px;
+    margin-bottom: 24px;
+    padding: 0 20px;
+  }
+  
+  .contact-us-modal-input input {
+    height: 56px;
+    width: 400px;
+    border: solid;
+    border-radius: 12px;
+    border-color: #CED3D8;
+    border-width: 0.5px;
+  }
+  
+  @media screen and (max-width: 1000px) {
+  
+    ::-webkit-scrollbar {
+      display: none;
+  }
+  
+    .header-container {
+      padding: 0 16px;
+    }
+  
+    .icon-logo svg {
+      font-size: 48px;
+    }
+  
+    .icon-logo a {
+      font-size: 19px;
+    }
+  
+    .hide-on-mobile {
+      display: block;
+    }
+  
+    .header-buttons a{
+      margin: 0 10px;
+    }
+  
+    /* Hide elements on larger screens */
+    ::-webkit-scrollbar {
+      display: none;
+  }
+    .hide-on-desktop {
+      display: none;
+    }
+  
+    .contact-us-modal-container{
+      justify-content: center;
+      height: 1084px;
+      overflow: hidden;
+      overflow-y: scroll;
+  
+    }
+  
+    .contact-us-modal-title-container {
+      width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      margin: 0 10px;
+      padding: 0 2%;
+    }
+  
+    .contact-us-modal-title p{
+      width: 270px;
+    }
+  
+    .contact-us-modal-input {
+      height: 104px;
+      width: 100%;
+      margin-bottom: 24px;
+    }
+  .contact-us-modal-input-left {
+    width: 100%;
+  
+  }
+  
+  .contact-us-modal-input-right {
+    width: 100%;
+  }
+    .contact-us-modal-input input {
+      height: 56px;
+      width: 90%;
+      border-radius: 12px;
+      border-color: rgba(206, 211, 216, 1);
+      border-width: 0.5px;
+    }
+  
+    .mobile-menu-icon {
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+  
+  }

@@ -1,0 +1,158 @@
+/* Default styles for desktop */
+.keep-in-touch-container {
+    height: 374px;
+    background-color: #00A2E1;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .keep-in-touch {
+    height: 214px;
+    width: 440px;
+    margin-top: -35px;
+  }
+  
+  .keep-in-touch h1 {
+    font-size: 36px;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+    text-align: left;
+  }
+  
+  .keep-in-touch p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    color: #FFFFFF;
+    margin-bottom: 38px;
+    text-align: left;
+  }
+  
+  .keep-in-touch input {
+    height: 48px;
+    width: 440px;
+    border-color: #CED3D8;
+    border-radius: 12px;
+    color: #CED3D8;
+    font-size: 20px;
+    text-indent: 3vh;
+  }
+  
+  .lets-socialize {
+    height: 206px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content horizontally */
+  }
+  
+  .lets-socialize h1 {
+    font-size: 36px;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin-bottom: 10px; /* Add some spacing between h1 and social icons */
+  }
+  
+  .lets-socialize a {
+    color: #FFFFFF;
+    text-align: center; /* Center the text inside .lets-socialize */
+    text-decoration: none;
+  }
+  
+  .lets-socialize .social-icon {
+    display: flex;
+    align-items: center; /* Align icon and text vertically */
+    margin-bottom: 10px; /* Add some spacing between social icons */
+  }
+  
+  .lets-socialize .social-icon a {
+    margin-left: 10px; /* Add some spacing between icon and text */
+  }
+  
+  /* Media query for tablets */
+  @media screen and (max-width: 768px) {
+    .keep-in-touch-container {
+      height: auto; /* Adjust height as needed for tablets */
+      flex-direction: column; /* Stack elements vertically */
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .keep-in-touch {
+      width: 100%; /* Expand width to fit the screen */
+      text-align: center; /* Center-align content */
+      margin-top: 20px; /* Add some spacing from the top */
+      margin-bottom: 20px;
+    }
+
+    .keep-in-touch h1{
+        text-align: center; /* Center-align content */
+      }
+
+      .keep-in-touch a{
+        text-align: center; /* Center-align content */
+      }
+  
+    .keep-in-touch input {
+      width: 80%; /* Reduce input width for tablets */
+    }
+  
+    .lets-socialize {
+      height: auto; /* Adjust height as needed for tablets */
+      text-align: center; /* Center-align content */
+      margin-top: 20px; /* Add some spacing from the top */
+      margin-bottom: 20px;
+    }
+  
+    .lets-socialize .social-icon {
+      margin-bottom: 10px; /* Add more spacing between social icons */
+    }
+  }
+  
+  /* Media query for mobile devices */
+  @media screen and (max-width: 600px) {
+    .keep-in-touch-container {
+      height: auto; /* Adjust height as needed for mobile devices */
+      flex-direction: column; /* Stack elements vertically */
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .keep-in-touch {
+      width: 100%; /* Expand width to fit the screen */
+      text-align: center; /* Center-align content */
+      margin-top: 20px; /* Add some spacing from the top */
+      margin-bottom: 40px;
+    }
+
+    .keep-in-touch h1{
+        text-align: center; /* Center-align content */
+      }
+
+      .keep-in-touch a{
+        font-size: 20px;
+        text-align: center; /* Center-align content */
+      }
+  
+    .keep-in-touch input {
+      width: 80%; /* Reduce input width for mobile devices */
+    }
+  
+    .lets-socialize {
+      height: auto; /* Adjust height as needed for mobile devices */
+      text-align: center; /* Center-align content */
+      margin-top: 20px; /* Add some spacing from the top */
+    }
+    .lets-socialize p{
+        font-size: 20px;
+        text-align: center; /* Center-align content */
+      }
+
+    .social-icon {
+        height: 32px;
+        margin: 0;
+    }
+  }
+  

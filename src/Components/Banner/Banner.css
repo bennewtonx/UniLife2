@@ -1,0 +1,212 @@
+
+
+.banner-container {
+    height: 548px;
+}
+
+.banner-text {
+    height: 480px;
+    background-image: url(../../../src/assets/cover-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  .banner-text h1 {
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 64px;
+    font-weight: 500;
+    padding: 0 334px;
+
+  }
+  
+  .banner-text p {
+    margin-top: 2vh;
+    color: #FFFFFF;
+    font-size: 4vh;
+    padding: 0 40vh;
+    line-height:36px;
+
+  }
+
+
+  @media (max-width: 1000px) {
+    .banner-text h1 {
+      font-size: 40px;
+      padding: 34px 70px 0 70px;
+    }
+  
+    .banner-text p {
+      font-size: 3vh;
+      padding: 0 10vh;
+    }
+  }
+  
+  @media (max-width: 600px) {
+
+    .banner-container {
+      height: 300px;
+  }
+
+    .banner-text{
+      height: 300px;
+      justify-content: start;
+      padding-top: 32px;
+
+    }
+
+    .banner-text h1 {
+      font-size: 40px;
+      padding: 0 40px;
+    }
+  
+    .banner-text p {
+      font-size: 20px;
+      padding: 0;
+    }
+  }
+
+  .banner-search {
+    position: relative;
+    height: 128px;
+    width: 1112px;
+    margin: 0 auto; /* Center horizontally */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FFFFFF;
+    top: -19vh;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.banner-search select, .banner-city select{
+    height: 48px;
+    width: 557px;
+    color: #CED3D8;
+    font-size: 20px;
+    text-indent: 3vh;
+
+    background-color: #FFFFFF;
+    border: solid;
+    border-width: 1px;
+    border-color: #CED3D8;
+    border-radius: 12px;
+}
+
+::placeholder{
+    font-size: 20px;
+    color: #CED3D8;
+    text-indent: 3vh;
+}
+
+.banner-search button{
+    height: 48px;
+    width: 348px;
+
+    color: #FFFFFF;
+    font-size: 20px;
+    background-color: #3A5295;
+    border: solid;
+    border-width: 1px;
+    border-color: #3A5295;
+    border-radius: 12px;
+}
+
+.banner-city {
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+    width: 1279px;
+    padding: 0 20px;
+}
+.banner-city h3 {
+    text-align: start;
+    margin: 0 0 10px 0;
+}
+
+
+@media (max-width: 1000px) {
+    .banner-search {
+      height: 96px;
+      width: 80%;
+        margin: 0 auto; /* Center horizontally */
+    }
+  
+    .banner-search input {
+        height: 5vh;
+        font-size: 3vh;
+        width: 70%;
+    }
+  
+    .banner-search button {
+        height: 5vh;
+        font-size: 2vh;
+        width: 20%;
+    }
+
+    .banner-city {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 20px 25px;
+        height: 161px;
+        width: 667px;
+    }
+
+    .banner-city input {
+        height: 48px;
+        width: 282px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .banner-search {
+        display: flex;
+        flex-direction: column;
+        height: 105px;
+        width: 80%;
+        margin: 0 auto;
+        top: -20px;
+      }
+      .banner-search input {
+        height: 38px;
+        width: 238px;
+        font-size: 3vh;
+        width: 70%;
+        margin-top: 11px;
+    }
+    .banner-search button {
+        height: 38px;
+        width: 145px;
+        font-size: 2vh;
+        margin: 10px 0 10px 0;
+    }
+
+    .banner-city {
+        height: 282px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        text-align: center;
+        padding: 20px 25px;
+}
+
+.banner-city input {
+    height: 48px;
+    width: 336px;
+}
+
+.banner-city h3 {
+    text-align: start;
+    margin: 0 0 10px 0;
+    display: none;
+}
+  }
