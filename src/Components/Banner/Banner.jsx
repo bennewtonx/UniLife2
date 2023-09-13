@@ -3,14 +3,12 @@ import PropTypes from 'prop-types';
 
 import './Banner.css'
 
-function Banner( {page, filters, updateFilters, cities} ) {
+function Banner( {page, filters, updateFilters, cities, query} ) {
 
-    const [selectedBedroom, setSelectedBedroom] = useState();
-    const [selectedBathroom, setSelectedBathroom] = useState();
-    const [selectedPrice, setSelectedPrice] = useState();
-    const [selectedHomeType, setSeectedHomeType] = useState();
-
-    
+    const [selectedBedroom, setSelectedBedroom] = useState(0);
+    const [selectedBathroom, setSelectedBathroom] = useState(0);
+    const [selectedPrice, setSelectedPrice] = useState(0);
+    const [selectedHomeType, setSelectedHomeType] = useState(0);
 
     useEffect(() => {
         console.log('selectedBedroom:', selectedBedroom)
@@ -35,32 +33,52 @@ function Banner( {page, filters, updateFilters, cities} ) {
         const selectedValue = event.target.value;
         setSelectedBedroom(selectedValue);
     
-        // Update filters with selected bedroom value
-        updateFilters({ ...filters, bedroom_count: selectedValue });
+        updateFilters({
+          ...filters,
+          query: {
+            ...filters.query,
+            bedroom_count: selectedValue,
+          },
+        });
       };
     
       const handleBathroomChange = (event) => {
         const selectedValue = event.target.value;
         setSelectedBathroom(selectedValue);
     
-        // Update filters with selected bathroom value
-        updateFilters({ ...filters, bathroom_count: selectedValue });
+        updateFilters({
+          ...filters,
+          query: {
+            ...filters.query,
+            bathroom_count: selectedValue,
+          },
+        });
       };
     
       const handlePriceChange = (event) => {
         const selectedValue = event.target.value;
         setSelectedPrice(selectedValue);
     
-        // Update filters with selected price value
-        updateFilters({ ...filters, rent: selectedValue });
+        updateFilters({
+          ...filters,
+          query: {
+            ...filters.query,
+            rent: selectedValue,
+          },
+        });
       };
     
       const handleHomeTypeChange = (event) => {
         const selectedValue = event.target.value;
         setSelectedHomeType(selectedValue);
     
-        // Update filters with selected home type value
-        updateFilters({ ...filters, property_type: selectedValue });
+        updateFilters({
+          ...filters,
+          query: {
+            ...filters.query,
+            property_type: selectedValue,
+          },
+        });
       };
     
     //Banner Text
@@ -160,12 +178,9 @@ function Banner( {page, filters, updateFilters, cities} ) {
               <option value="" disabled selected hidden>
                 Any type
               </option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
+              <option value="Furnished">Furnished</option>
+              <option value="Unfurnished">Unfurnished</option>
+
             </select>
           </div>
         );
