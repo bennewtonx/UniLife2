@@ -183,6 +183,9 @@ h1, h2 {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
+    overflow: hidden;
+    overflow-y: scroll;
+
   }
   
   .booking-modal-title-container {
@@ -208,9 +211,13 @@ h1, h2 {
     border-color: #CED3D8;
     border-width: 0.5px;
   }
+
+  .modal-close-btn {
+    width: 400px;
+  }
   
   /* Media queries for tablet screens */
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1000px) {
     .property-details {
       flex-direction: column;
       align-items: center;
@@ -257,7 +264,7 @@ h1, h2 {
   @media screen and (max-width: 600px) {
   
     .property-details {
-      width: 100%;
+      width: auto;
     }
   
   
@@ -269,22 +276,22 @@ h1, h2 {
     }
   
     .property-images-container {
-      width: 80%;
+      width: 360px;
       align-items: center;
     }
   
     .property-main-image img {
       height: 232px;
-      width: 100%;
+      width: 360px;
     }
   
     .property-side-images img {
       height: 82px;
-      width: 106px
+      width: 104px;
     }
   
     .property-address {
-      font-size: 24px;
+      font-size: 20px;
     }
   
     .property-shortlist,
@@ -294,8 +301,8 @@ h1, h2 {
     }
   
     .property-info-container {
-      width: 80%;
-      padding: 0 10px;
+      width: 360px;
+      padding: 0 5px;
       flex-wrap: wrap;
     }
   
@@ -307,7 +314,7 @@ h1, h2 {
     .property-info{
       height: auto;
       padding: 0 10px 20px 10px;
-      width: 100%;
+      width: 360px;
     }
   
     .property-info h3 {
@@ -317,17 +324,17 @@ h1, h2 {
     .description,
     .key-features-container {
       height: auto;
-      width: 80%;
-      margin-top: 40px;
+      width: 360px;
+      margin-top: 0px;
     }
   
     .bedroom-prices-container {
-      width: 80%;
+      width: 360px;
       margin-bottom: 80px;
     }
   
     .home-description-bedrooms-container {
-      width: 100%;
+      width: 360px;
     }
   
     hr {
@@ -362,25 +369,38 @@ h1, h2 {
       border-color: #CED3D8;
       border-width: 0.5px;
     }
+
+    .booking-icon {
+        display: none;
+    }
   
     .booking-modal-container {
-      font-size: 10px;
+      font-size: 16px;
     }
   
     .booking-modal-container h1{
       font-size: 25px;
     }
+
+    .booking-modal-container h2{
+        font-size: 18px;
+      }
   
     .booking-modal-container input{
-      font-size: 25px;
+      font-size: 16px;
     }
   
     .booking-modal-input {
-      width: 90%;
+      width: 303px;
     }
+
+    .booking-modal-input input {
+        height: 56px;
+        width: 303px;
+      }
   
     .modal-close-btn {
-      width: ;
+      width: 304px;
     }
   }
   

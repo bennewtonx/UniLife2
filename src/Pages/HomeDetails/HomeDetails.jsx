@@ -36,9 +36,9 @@ function HomeDetailsPage({ clickedCityName }) {
       bottom: '1%',
       marginRight: '-50%',
       transform: 'translate(-50%, -50%)',
-      width: '70%',
       height: '90%',
-      borderRadius: '24px'
+      borderRadius: '24px',
+      padding: '10px'
     },
     overlay: {
       backgroundColor: 'rgba(1, 0, 0, 0.5)',
@@ -126,7 +126,7 @@ function HomeDetailsPage({ clickedCityName }) {
                         <h3 style={{ width: '485px', lineHeight: '32px' }}>{property.address.street}, {property.address.city}, {property.address.postcode}</h3>
                       </div>
                       <div>
-                        < MdOutlineAddHomeWork style={{ fontSize: '70px', color: 'rgba(58, 82, 149, 1)' }}/>
+                        < MdOutlineAddHomeWork className="booking-icon"style={{ fontSize: '70px', color: 'rgba(58, 82, 149, 1)' }}/>
                       </div>
                     </div>
                     <div className='booking-modal-input-left'>
@@ -151,7 +151,7 @@ function HomeDetailsPage({ clickedCityName }) {
                           style={{ height: '184px' }} />
                       </div>
                       <button className='modal-close-btn' onClick={() => setIsOpen(false)}
-                        style={{ height: '56px', width: '400px', backgroundColor: 'rgba(58, 82, 149, 1)',
+                        style={{ height: '56px', backgroundColor: 'rgba(58, 82, 149, 1)',
                           borderRadius: '12px', color: '#FFFFFF', fontSize: '20px', border: 'none', margin: '50px 20px' }}>Submit</button>
                     </div>
                   </div>
