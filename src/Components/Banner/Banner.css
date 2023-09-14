@@ -208,11 +208,13 @@
 }
 
 .banner-city select {
-    height: 48px;
+  font-size: 16px;
+    height: 40px;
     width: 336px;
 }
 
 .banner-city h3 {
+  font-size: 16px;
     text-align: start;
     margin: 5px 0 0 0;
 }
