@@ -189,13 +189,13 @@
         width: 238px;
         font-size: 3vh;
         width: 70%;
-        margin-top: 5px;
+        margin-top: 10px;
     }
     .banner-search button {
         height: 38px;
         width: 145px;
         font-size: 2vh;
-        margin: 20px 0 10px 0;
+        margin: 10px 0 10px 0;
     }
 
     .banner-city {
