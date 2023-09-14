@@ -117,7 +117,7 @@ function HomeDetailsPage({ clickedCityName }) {
                   isOpen={isOpen}
                   onRequestClose={() => setIsOpen(false)}
                   style={customStyles}
-                  contentLabel="Contact Us Modal"
+                  contentLabel="Booking Modal"
                 >
                   <div className='booking-modal-container'>
                     <div className='booking-modal-title-container'>

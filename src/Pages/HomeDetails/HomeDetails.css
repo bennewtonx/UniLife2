@@ -1,3 +1,7 @@
+body {
+    width: auto;
+}
+
 h1, h2 {
     font-weight: 400;
   }
@@ -263,10 +267,6 @@ h1, h2 {
   /* Media queries for mobile screens */
   @media screen and (max-width: 600px) {
   
-    .property-details {
-    }
-  
-  
     .property-price {
       flex-direction: row;
       flex-wrap: wrap;
@@ -275,13 +275,13 @@ h1, h2 {
     }
   
     .property-images-container {
-      width: 360px;
+      width: 100%;
       align-items: center;
     }
   
     .property-main-image img {
       height: 232px;
-      width: 360px;
+      width: 100%;
     }
   
     .property-side-images img {
@@ -290,6 +290,7 @@ h1, h2 {
     }
   
     .property-address {
+        width: 100%;
       font-size: 20px;
     }
   
@@ -313,7 +314,7 @@ h1, h2 {
     .property-info{
       height: auto;
       padding: 0 10px 20px 10px;
-      width: 360px;
+      width: 100%;
     }
   
     .property-info h3 {
@@ -333,7 +334,7 @@ h1, h2 {
     }
   
     .home-description-bedrooms-container {
-      width: 360px;
+      width: 100%;
     }
   
     hr {
@@ -342,7 +343,11 @@ h1, h2 {
   
     .property-buttons {
       flex-direction: column;
-      width: 150%;
+      width: 300px;
+    }
+
+    .property-buttons button{
+        width: 300px;
     }
   
     .property-shortlist {
@@ -350,14 +355,14 @@ h1, h2 {
     }
   
     .booking-modal-container {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      justify-content: space-between;
+
+      align-items: center;
     }
   
     .booking-modal-title {
       width: 80%;
+      padding-left: 10%;
+      margin-bottom: -10%;
     }
   
     .booking-modal-input input {
