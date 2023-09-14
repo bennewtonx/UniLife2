@@ -168,7 +168,7 @@ function Banner( {page, filters, updateFilters, cities, query} ) {
       const priceFilter =
         page === 'properties/city/' && (
           <div>
-            <h3>Max Price</h3>
+            <h3>Min Price</h3>
             <select value={selectedPrice} onChange={handlePriceChange}>
               <option value="" disabled selected hidden>
                 Any price
