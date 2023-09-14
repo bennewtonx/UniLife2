@@ -10,11 +10,13 @@ import { MdOutlineBed, MdOutlineBathtub, MdLocationOn, MdHomeFilled } from 'reac
 
 import './CityDetails.css';
 
-function CityDetails({ selectedBedroom, selectedBathroom, selectedPrice, selectedHomeType }) {
+function CityDetails({ selectedBedroom, selectedBathroom, selectedPrice, selectedHomeType, selectedCity }) {
   const { cityId } = useParams();
   const [specificCity, setSpecificCity] = useState([]);
   const [studentLife, setStudentLife] = useState('');
+  const [selectedCityId, setSelectedCityId] = useState(cityId); // Initialize with the cityId from the URL
   const { response } = specificCity;
+
 
   useEffect(() => {
     setFilters((prevFilters) => ({
@@ -31,7 +33,7 @@ function CityDetails({ selectedBedroom, selectedBathroom, selectedPrice, selecte
   
   const [filters, setFilters] = useState({
     query: {
-      city_id: cityId,
+      city_id: selectedCityId,
       bedroom_count: selectedBedroom,
       bathroom_count: selectedBathroom,
       rent: selectedPrice,
@@ -48,14 +50,14 @@ function CityDetails({ selectedBedroom, selectedBathroom, selectedPrice, selecte
   useEffect(() => {
     // Call API to get data
     axios
-      .get(`${import.meta.env.VITE_APP_BASE_URL}properties/city/${cityId}`)
+      .get(`${import.meta.env.VITE_APP_BASE_URL}properties/city/${selectedCityId}}`)
       .then((res) => {
         setSpecificCity(res.data);
       })
       .catch((err) => console.log(err));
 
     axios
-      .get(`${import.meta.env.VITE_APP_BASE_URL}cities/${cityId}`)
+      .get(`${import.meta.env.VITE_APP_BASE_URL}cities/${selectedCityId}`)
       .then((res) => {
         setStudentLife(res.data.data[0]);
       })
@@ -83,7 +85,7 @@ function CityDetails({ selectedBedroom, selectedBathroom, selectedPrice, selecte
   return (
     <div className="city-details-page-container">
       <Header />
-      <Banner
+      <Banner 
         page="properties/city/"
         filters={filters}
         updateFilters={updateFiltersFromBanner}
@@ -91,6 +93,8 @@ function CityDetails({ selectedBedroom, selectedBathroom, selectedPrice, selecte
         selectedBathroom={selectedBathroom}
         selectedPrice={selectedPrice}
         selectedHomeType={selectedHomeType}
+        selectedCityId={selectedCityId}
+        onCityChange={(newCityId) => setSelectedCityId(newCityId)}
       />
       <div className="property-container">
       <div className="number-of-homes">

@@ -11,12 +11,11 @@ function Header() {
 
   const contactUsCustomStyles = {
     content: {
-      top: '55%',
+      top: '50%',
       left: '50%',
       right: '20%',
       bottom: '1%',
       marginRight: '-50%',
-      width: '70%',
       height: '90%',
       backgroundColor: 'transparent',
       border: 'none',
@@ -61,7 +60,7 @@ function Header() {
               <p style={{lineHeight: '32px' }}>Feel free to contact us if you have any questions. Looking forward to hearing from you.</p>
             </div>
             <div>
-              <MdPostAdd style={{ fontSize: '70px', color: 'rgba(58, 82, 149, 1)' }} />
+              <MdPostAdd className='contact-us-logo'style={{ fontSize: '70px', color: 'rgba(58, 82, 149, 1)' }} />
             </div>
           </div>
           <div className='contact-us-modal-input-left'>
@@ -89,10 +88,10 @@ function Header() {
               <input type='text' placeholder='Enter your message'
                 style={{ height: '184px' }} />
             </div>
-            <button className='modal-close-btn' onClick={() => setIsOpen(false)}
+            <button className='contact-us-modal-close-btn' onClick={() => setIsOpen(false)}
               style={{
-                height: '56px', width: '400px', backgroundColor: 'rgba(58, 82, 149, 1)',
-                borderRadius: '12px', color: '#FFFFFF', fontSize: '20px', border: 'none', margin: '0 20px'
+                height: '56px', backgroundColor: 'rgba(58, 82, 149, 1)',
+                borderRadius: '12px', color: '#FFFFFF', fontSize: '20px', border: 'none', margin: '0 9px'
               }}>Close</button>
           </div>
         </div>

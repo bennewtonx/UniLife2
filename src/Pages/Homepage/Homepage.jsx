@@ -16,7 +16,7 @@ import KeepInTouch from '../../Components/KeepInTouch/KeepInTouch';
 import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
 
-function Homepage() {
+function Homepage( ) {
   const [cities, setCities] = useState([]);
   const [clickedCityName, setClickedCityName] = useState('');
   const handleCityClick = (_id) => {
@@ -37,10 +37,28 @@ function Homepage() {
       .catch((err) => console.log(err));
   }, []);
 
+  const handleCityChange = (selectedCity) => {
+    // Do something with the selected city object, including its _id
+    if (selectedCity) {
+      console.log('Selected city ID:', selectedCity._id);
+      
+      // Make your API call here using the selected city ID
+      axios
+        .get(`${import.meta.env.VITE_APP_BASE_URL}cities/${selectedCity._id}`)
+        .then((res) => {
+          // Handle the API response here
+          console.log('API Response:', res.data);
+        })
+        .catch((err) => {
+          console.error('API Error:', err);
+        });
+    }
+  };
+
   return (
     <div>
       <Header />
-        <Banner page='home' cities={cities}/>
+        <Banner page='home' cities={cities} onCityChange={handleCityChange} />
       <div className='see-all-cities-container'>
       <h2>Student accommodations in our top cities</h2>
         <div className='city-card-container'>

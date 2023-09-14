@@ -149,13 +149,13 @@
     .banner-search select {
         height: 5vh;
         font-size: 3vh;
-        width: 70%;
+        width: 60%;
     }
   
     .banner-search button {
         height: 5vh;
         font-size: 2vh;
-        width: 20%;
+        width: 200px;
     }
 
     .banner-city {

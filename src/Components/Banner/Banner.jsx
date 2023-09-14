@@ -1,14 +1,20 @@
 import { React, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import axios from 'axios'
 
 import './Banner.css'
 
-function Banner( {page, filters, updateFilters, cities, query} ) {
+function Banner( {page, filters, updateFilters, query, city, onCityChange } ) {
 
     const [selectedBedroom, setSelectedBedroom] = useState(0);
     const [selectedBathroom, setSelectedBathroom] = useState(0);
     const [selectedPrice, setSelectedPrice] = useState(0);
     const [selectedHomeType, setSelectedHomeType] = useState(0);
+    const [selectedCity, setSelectedCity] = useState();
+    const [selectedCityId, setSelectedCityId] = useState();
+    const [cities, setCities] = useState([]);
+
 
     useEffect(() => {
         console.log('selectedBedroom:', selectedBedroom)
@@ -27,6 +33,32 @@ function Banner( {page, filters, updateFilters, cities, query} ) {
         console.log('selectedHomeType:', selectedHomeType);
       }, [selectedHomeType]);
 
+      useEffect(() => {
+        axios
+          .get(`${import.meta.env.VITE_APP_BASE_URL}cities`)
+          .then((res) => {
+            console.log('yes', res.data.response.name); // Just for debugging, remove this line if not needed
+            setCities(res.data.response); // Update the cities state with the array of cities
+            console.log(cities);
+            console.log(res.data);
+          })
+          .catch((err) => console.log(err));
+      }, []);
+
+      const handleCityChange = (event) => {
+        const selectedCityId = event.target.value; // Get the selected city ID
+        setSelectedCity(selectedCityId);
+      
+        // Find the selected city object in the cities array
+        const selectedCity = cities.find((city) => city._id === selectedCityId);
+        console.log('ss', selectedCityId)
+      
+        // Call the parent callback function to handle city selection with the city object
+        if (onCityChange) {
+          onCityChange(selectedCity);
+        }
+      };
+      
       //Banner Search Bar
 
       const handleBedroomChange = (event) => {
@@ -94,19 +126,22 @@ function Banner( {page, filters, updateFilters, cities, query} ) {
       description = 'A simple and faster way to search for student accommodation';
 
        search = (
-       <select defaultValue="">
-      <option value="" disabled>
-        Search by city
-      </option>
-      {cities.map((city) => (
-        <option key={city.id} value={city.name}>
-          {city.name}
-        </option>
-      ))}
-    </select>
+<select onChange={handleCityChange} defaultValue="">
+  <option value="" disabled>
+    Search by city
+  </option>
+  {cities.map((city) => (
+    <option key={city._id} value={city._id}> {/* Set the value to city._id */}
+      {city.name}
+    </option>
+  ))}
+</select>
     )
-      click = <button>Find Homes</button>;
-      bannerClassName = 'banner-search';
+    click = (
+      <Link to={`/properties/city/${selectedCityId}`}>
+        <button>Find Homes</button>
+      </Link>
+    );
     
       } else if (page === 'properties/city/') {
         // Customize text for the search page

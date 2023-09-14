@@ -79,6 +79,10 @@
     border-color: #CED3D8;
     border-width: 0.5px;
   }
+
+  .contact-us-modal-close-btn  {
+    width: 400px;
+  }
   
   @media screen and (max-width: 1000px) {
   
@@ -162,5 +166,57 @@
   }
   
   @media screen and (max-width: 600px) {
-  
+  .contact-us-logo {
+    display: none;
+  }
+
+  .contact-us-modal-container {
+
+    align-items: center;
+  }
+
+  .contact-us-modal-title {
+    width: 80%;
+    padding-left: 1%;
+  }
+
+  .contact-us-modal-input input {
+    height: 56px;
+    width: 90%;
+    border: solid;
+    border-radius: 12px;
+    border-color: #CED3D8;
+    border-width: 0.5px;
+  }
+
+  .contact-us-modal-container {
+    font-size: 16px;
+  }
+
+  .contact-us-modal-container h1{
+    font-size: 25px;
+  }
+
+  .contact-us-modal-container h2{
+      font-size: 18px;
+    }
+
+  .contact-us-modal-container input{
+    font-size: 16px;
+  }
+
+  .contact-us-modal-input {
+    width: 303px;
+    padding: 0;
+  }
+
+  .contact-us-modal-input input {
+      height: 56px;
+      width: 303px;
+    }
+
+    .contact-us-modal-close-btn  {
+    width: 303px;
+    padding: 0;
+  }
   }
