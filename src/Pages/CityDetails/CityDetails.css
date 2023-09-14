@@ -5,6 +5,11 @@
 
 }
 
+.number-of-homes {
+    margin-top: 80px;
+    text-align: center;
+}
+
 .property-card {
     height: 500px;
     width: 400px;
@@ -83,3 +88,99 @@
     border-width: 1px;
     padding: 13px 0 11px 0;
 }
+
+.student-in-city-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .student-in-city {
+    height: 520px;
+    width: 1280px;
+    margin: 120px 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(246, 250, 253, 1);
+  }
+  
+  .student-in-city-text {
+    height: fit-content;
+    width: 520px;
+  }
+  
+  .student-in-city-text p {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  
+  .student-in-city-image img {
+    height: 400px;
+    width: 560px;
+    border-radius: 24px;
+  }
+
+   /* Media query for tablets */
+   @media screen and (max-width: 1000px) {
+    .property-card-container {
+
+    
+    }
+
+    .student-in-city {
+      width: 90%; /* Adjust width for tablets */
+      margin: 80px auto; /* Center-align the section */
+      flex-direction: column; /* Stack elements vertically */
+      align-items: center;
+      height: auto; /* Adjust height as needed */
+      padding: 20px;
+    }
+  
+    .student-in-city-text {
+      width: 80%; /* Adjust width for tablets */
+      text-align: center; /* Center-align text */
+    }
+  
+    .student-in-city-text p {
+      font-size: 18px; /* Adjust font size for tablets */
+    }
+  
+    .student-in-city-image img {
+      width: 100%; /* Adjust image width for tablets */
+      height: auto; /* Maintain aspect ratio */
+      margin-top: 20px; /* Add spacing between text and image */
+      border-radius: 12px; /* Reduce border-radius for tablets */
+    }
+  }
+  
+  /* Media query for mobile devices */
+  @media screen and (max-width: 600px) {
+    .number-of-homes {
+        margin-top: 350px;
+        margin-bottom: -30px;
+    }
+
+    .student-in-city {
+      width: 90%; /* Adjust width for mobile devices */
+      margin: 40px auto; /* Center-align the section */
+    }
+  
+    .student-in-city-text {
+      width: 80%; /* Adjust width for mobile devices */
+      text-align: center; /* Center-align text */
+    }
+  
+    .student-in-city-text p {
+      font-size: 16px; /* Adjust font size for mobile devices */
+      line-height: 26px; /* Adjust line height for mobile devices */
+      
+    }
+  
+    .student-in-city-image img {
+      width: 100%; /* Adjust image width for mobile devices */
+      height: auto; /* Maintain aspect ratio */
+      margin-top: 20px; /* Add spacing between text and image */
+      border-radius: 12px; /* Reduce border-radius for mobile devices */
+    }
+  }
+  

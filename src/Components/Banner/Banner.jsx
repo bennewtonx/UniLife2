@@ -93,7 +93,7 @@ function Banner( {page, filters, updateFilters, cities, query} ) {
       title = 'Find Student homes with bills included';
       description = 'A simple and faster way to search for student accommodation';
 
-       let search = (
+       search = (
        <select defaultValue="">
       <option value="" disabled>
         Search by city
@@ -110,9 +110,20 @@ function Banner( {page, filters, updateFilters, cities, query} ) {
     
       } else if (page === 'properties/city/') {
         // Customize text for the search page
+        title = 'Search Accomodation'
+        description = 'Whatever you`re after, we can help you find the right student accommodation for you.'
         search = '';
         click = '';
         bannerClassName = 'banner-search banner-city';
+
+      } else if (page === 'seeallcities') {
+        // Customize text for the search page
+        title = 'Student Accomodation'
+        description = 'UniLife have student accommodation available across the UK. Whatever you`re after, we can help you find the right student accommodation for you.'
+        
+        search = '';
+        click = '';
+        bannerClassName = 'banner-cities';
       }
     
       const bedroomFilter =
@@ -162,10 +173,10 @@ function Banner( {page, filters, updateFilters, cities, query} ) {
               <option value="" disabled selected hidden>
                 Any price
               </option>
-              <option value="Under £100 pppw">Under £100 pppw</option>
-              <option value="£100 - £150 pppw">£100 - £150 pppw</option>
-              <option value="Under £200 pppw">Under £200 pppw</option>
-              <option value="£200+ pppw">£200+ pppw</option>
+              <option value="1000">£1000</option>
+              <option value="1500">£1500</option>
+              <option value="2000">£2000</option>
+              <option value="2500">£2500</option>
             </select>
           </div>
         );
@@ -178,8 +189,9 @@ function Banner( {page, filters, updateFilters, cities, query} ) {
               <option value="" disabled selected hidden>
                 Any type
               </option>
-              <option value="Furnished">Furnished</option>
-              <option value="Unfurnished">Unfurnished</option>
+              <option value="Detached">Detached</option>
+              <option value="Semi-Detached">Semi-Detached</option>
+              <option value="Apartment">Apartment</option>
 
             </select>
           </div>

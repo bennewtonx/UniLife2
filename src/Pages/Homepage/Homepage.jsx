@@ -60,10 +60,10 @@ function Homepage() {
             </div>
           ))}
         </div>
-      </div>
-      <Link to='/seeallcities'>
+        <Link to='/seeallcities'>
         <button className='see-all-cities-button'>See all cities</button>
       </Link>
+      </div>
       <div className='compare-container'>
         <div className='compare-student-homes'>
           <h1>Compare all-inclusive student homes.</h1>

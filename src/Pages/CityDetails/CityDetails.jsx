@@ -92,10 +92,10 @@ function CityDetails({ selectedBedroom, selectedBathroom, selectedPrice, selecte
         selectedPrice={selectedPrice}
         selectedHomeType={selectedHomeType}
       />
-      <div className="number-of-homes">
-        <h1 style={{ marginLeft: '80px', marginBottom: '-10px' }}>{specificCity.total} homes in {specificCity.city_name}</h1>
-      </div>
       <div className="property-container">
+      <div className="number-of-homes">
+        <h1>{specificCity.total} homes in {specificCity.city_name}</h1>
+      </div>
         <div className="property-card-container">
           {/* Display information for each property */}
           {response &&
@@ -115,7 +115,7 @@ function CityDetails({ selectedBedroom, selectedBathroom, selectedPrice, selecte
                   </div>
                 </div>
                 <div className="type-furnished">
-                  <h3>Detached</h3>
+                  <h3>{property.property_type}</h3>
                   <h3>{property.furnished}</h3>
                 </div>
                 <div className="address">

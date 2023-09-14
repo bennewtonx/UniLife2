@@ -81,14 +81,21 @@
     justify-content: space-around;
     align-items: center;
     background-color: #FFFFFF;
-    top: -19vh;
+    top: -50px;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.banner-search select {
+  width: 557px;
+}
+
+.banner-city select {
+  width: 282px;
+}
+
 .banner-search select, .banner-city select{
     height: 48px;
-    width: 557px;
     color: #CED3D8;
     font-size: 20px;
     text-indent: 3vh;
@@ -139,7 +146,7 @@
         margin: 0 auto; /* Center horizontally */
     }
   
-    .banner-search input {
+    .banner-search select {
         height: 5vh;
         font-size: 3vh;
         width: 70%;
@@ -159,9 +166,10 @@
         padding: 20px 25px;
         height: 161px;
         width: 667px;
+        top: -100px;
     }
 
-    .banner-city input {
+    .banner-city select {
         height: 48px;
         width: 282px;
     }
@@ -174,14 +182,14 @@
         height: 105px;
         width: 80%;
         margin: 0 auto;
-        top: -20px;
+        top: -50px;
       }
-      .banner-search input {
+      .banner-search select {
         height: 38px;
         width: 238px;
         font-size: 3vh;
         width: 70%;
-        margin-top: 11px;
+        margin-top: 1px;
     }
     .banner-search button {
         height: 38px;
@@ -199,14 +207,13 @@
         padding: 20px 25px;
 }
 
-.banner-city input {
+.banner-city select {
     height: 48px;
     width: 336px;
 }
 
 .banner-city h3 {
     text-align: start;
-    margin: 0 0 10px 0;
-    display: none;
+    margin: 5px 0 0 0;
 }
   }

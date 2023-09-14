@@ -1,0 +1,386 @@
+h1, h2 {
+    font-weight: 400;
+  }
+  
+  .property-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 60px;
+  }
+  
+  .property-images-container a{
+    
+  }
+  
+  .property-info {
+    height: 484px;
+    width: 620px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: solid;
+    border-radius: 24px;
+    border-color: rgba(206, 211, 216, 1);
+    border-width: 0.5px;
+    margin-bottom: 24px;
+    margin-top: 36px;
+  }
+  
+  .property-address {
+    width: 540px;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 20px 0 0 0;
+  }
+  
+  .property-address h2 {
+    /* Add any desired styling for the address */
+  }
+  
+  .property-price {
+    display: flex;
+    flex-wrap: wrap; /* Allow flex items to wrap to the next line */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    gap: 20px; /* Add spacing between info blocks */
+    padding: 40px 40px 0 0px;
+  }
+  
+  /* Adjust width and margins as needed */
+  .property-info .info-block {
+    width: 180px;
+    text-align: center;
+  }
+  
+  .property-images-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%; /* Adjust as needed */
+    align-items: start;
+  }
+  
+  .property-images-container button {
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    margin-bottom: 16px;
+  }
+  
+  .property-main-image img {
+    height: 400px;
+    width: 620px;
+    border-radius: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .property-side-images img {
+    height: 140px;
+    width: 196px;
+    border-radius: 24px;
+    margin-bottom: 10px;
+    margin: 0 8px;
+  }
+  
+  .property-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+  }
+  
+  .property-shortlist {
+    height: 48px;
+    width: 298px;
+    font-size: 16px;
+    border: solid;
+    border-radius: 12px;
+    border-color: rgba(206, 211, 216, 1);
+    border-width: 0.5px;
+  }
+  
+  .property-book {
+    height: 48px;
+    width: 298px;
+    font-size: 20px;
+    color: #FFFFFF;
+    border: solid;
+    border-radius: 12px;
+    background-color: rgba(58, 82, 149, 1);
+    border-color: rgba(58, 82, 149, 1);
+  }
+  
+  .description {
+    height: 696px;
+    width: 520px;
+    line-height: 32px;
+    align-items: start;
+  }
+  
+  .bedroom-prices-container {
+    height: auto;
+    width: 620px;
+    text-align: left;
+    margin-bottom: 124px;
+  }
+  
+  .bedroom-prices {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .bedroom-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically */
+    padding: 24px 24px; /* Add padding for better spacing */
+  
+    /* Add top border and border-radius for the first bedroom */
+    &:first-child {
+      border: 1px solid #ccc;
+      border-top-left-radius: 24px;
+      border-top-right-radius: 24px;
+    }
+  
+    /* Add bottom border and border-radius for the last bedroom */
+    &:last-child {
+      border-bottom: 1px solid #ccc;
+      border-bottom-left-radius: 24px;
+      border-bottom-right-radius: 24px;
+    }
+  
+    /* Add border between bedrooms */
+    + .bedroom-price {
+      border-bottom: solid #ccc;
+      border-right: solid #ccc;
+      border-left: solid #ccc;
+      border-width: 0.5px;
+    }
+  }
+  
+  .bedroom-price p {
+    margin: 0; /* Remove default margin to avoid extra spacing */
+  }
+  
+  .key-features-container {
+    height: auto;
+    width: 500px;
+    margin-top: 74px; /* Adjust the top margin as needed */
+  }
+  
+  .home-description-bedrooms-container {
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .booking-modal-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .booking-modal-title-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  .booking-modal-input {
+    height: 104px;
+    width: 100%;
+    margin-bottom: 24px;
+    padding: 0 20px;
+  }
+  
+  .booking-modal-input input {
+    height: 56px;
+    width: 400px;
+    border: solid;
+    border-radius: 12px;
+    border-color: #CED3D8;
+    border-width: 0.5px;
+  }
+  
+  /* Media queries for tablet screens */
+  @media screen and (max-width: 1024px) {
+    .property-details {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .property-images-container {
+      width: 100%;
+      align-items: center;
+    }
+  
+    .property-main-image img {
+      width: 100%;
+    }
+  
+    .property-side-images img {
+      width: 30%;
+    }
+  
+    .property-buttons {
+      flex-direction: row;
+      align-items: center;
+      margin-top: 20px;
+    }
+  
+    .booking-modal-container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  
+    .booking-modal-input input {
+      height: 56px;
+      width: 90%;
+      border: solid;
+      border-radius: 12px;
+      border-color: #CED3D8;
+      border-width: 0.5px;
+    }
+    
+  }
+  
+  /* Media queries for mobile screens */
+  @media screen and (max-width: 600px) {
+  
+    .property-details {
+      width: 100%;
+    }
+  
+  
+    .property-price {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 20px 0;
+    }
+  
+    .property-images-container {
+      width: 80%;
+      align-items: center;
+    }
+  
+    .property-main-image img {
+      height: 232px;
+      width: 100%;
+    }
+  
+    .property-side-images img {
+      height: 82px;
+      width: 106px
+    }
+  
+    .property-address {
+      font-size: 24px;
+    }
+  
+    .property-shortlist,
+    .property-book {
+      width: 49%;
+      font-size: 16px;
+    }
+  
+    .property-info-container {
+      width: 80%;
+      padding: 0 10px;
+      flex-wrap: wrap;
+    }
+  
+    .property-info .info-block {
+      width: 110px;
+      margin: 0 10px
+    }
+  
+    .property-info{
+      height: auto;
+      padding: 0 10px 20px 10px;
+      width: 100%;
+    }
+  
+    .property-info h3 {
+      font-size: 20px;
+    }
+  
+    .description,
+    .key-features-container {
+      height: auto;
+      width: 80%;
+      margin-top: 40px;
+    }
+  
+    .bedroom-prices-container {
+      width: 80%;
+      margin-bottom: 80px;
+    }
+  
+    .home-description-bedrooms-container {
+      width: 100%;
+    }
+  
+    hr {
+      width: 350px;
+    }
+  
+    .property-buttons {
+      flex-direction: column;
+      width: 150%;
+    }
+  
+    .property-shortlist {
+      margin-bottom: 10px;
+    }
+  
+    .booking-modal-container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  
+    .booking-modal-title {
+      width: 80%;
+    }
+  
+    .booking-modal-input input {
+      height: 56px;
+      width: 90%;
+      border: solid;
+      border-radius: 12px;
+      border-color: #CED3D8;
+      border-width: 0.5px;
+    }
+  
+    .booking-modal-container {
+      font-size: 10px;
+    }
+  
+    .booking-modal-container h1{
+      font-size: 25px;
+    }
+  
+    .booking-modal-container input{
+      font-size: 25px;
+    }
+  
+    .booking-modal-input {
+      width: 90%;
+    }
+  
+    .modal-close-btn {
+      width: ;
+    }
+  }
+  
