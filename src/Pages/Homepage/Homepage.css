@@ -210,8 +210,8 @@
 
 @media (max-width: 600px) {
     .city-card p{
-        width: fit-content;
-        font-size: 100px;
+        width: 100px;
+        font-size: 20px;
     }
 
     .see-all-cities-container {
