@@ -216,6 +216,10 @@ h1, h2 {
     border-width: 0.5px;
   }
 
+  .booking-modal-input-right {
+    align-items: center;
+  }
+
   .modal-close-btn {
     width: 400px;
   }
@@ -243,7 +247,6 @@ h1, h2 {
     .property-buttons {
       flex-direction: row;
       align-items: center;
-      margin-top: 20px;
     }
   
     .booking-modal-container {

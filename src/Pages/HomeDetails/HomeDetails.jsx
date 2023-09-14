@@ -20,6 +20,13 @@ function HomeDetailsPage({ clickedCityName }) {
   const [isShortlist, setIsShortlist] = useState(false);
   const { shortlist, addShortlist, removeShortlist } = useContext(ShortlistContext);
 
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Function to switch the main image when a side image is clicked
+  const switchMainImage = (index) => {
+    setCurrentImageIndex(index);
+  };
+
   useEffect(()=>{
     setIsShortlist(shortlist.find(item => item.id === property.id));
   }, [shortlist, property]);
@@ -63,11 +70,16 @@ function HomeDetailsPage({ clickedCityName }) {
           <div className='property-images-container'>
             <Link to={`properties/city/${specificCity.cityId}`} style={{ display: 'block', textAlign: 'left' }}><button>&lt;&nbsp;Back to search</button></Link>
             <div className='property-main-image'>
-              <img src={property.images[0]} alt='Main Property' />
+              <img src={property.images[currentImageIndex]} alt='Main Property' />
             </div>
             <div className='property-side-images'>
               {property.images.slice(1, 4).map((image, index) => (
-                <img key={index} src={image} alt={`Property ${index + 2}`} />
+                <img 
+                key={index}
+                src={image}
+                alt={`Property ${index + 2}`}
+                onClick={() => switchMainImage(index + 1)}
+/>
               ))}
             </div>
           </div>
@@ -104,13 +116,17 @@ function HomeDetailsPage({ clickedCityName }) {
                 </div>
               </div>
               <div className='property-buttons'>
-                {
-                  isShortlist ?
-                  <button className='property-shortlist' onClick={() => removeShortlist(property)}><IoMdHeart />Shortlist</button>
-                  :
-                  <button className='property-shortlist' onClick={() => addShortlist(property)}><IoMdHeartEmpty />Shortlist</button>
 
-                }
+                
+              {shortlist.some((item) => item._id === property._id) ? (
+              <button className='property-shortlist' onClick={() => removeShortlist(property)}>
+                Remove from Shortlist
+              </button>
+            ) : (
+              <button className='property-shortlist' onClick={() => addShortlist(property)}>
+                Add to Shortlist
+              </button>
+            )}
                 <button className='property-book' onClick={() => setIsOpen(true)}>Book Viewing</button>
                 </div>
                 <Modal
@@ -152,7 +168,7 @@ function HomeDetailsPage({ clickedCityName }) {
                       </div>
                       <button className='modal-close-btn' onClick={() => setIsOpen(false)}
                         style={{ height: '56px', backgroundColor: 'rgba(58, 82, 149, 1)',
-                          borderRadius: '12px', color: '#FFFFFF', fontSize: '20px', border: 'none', margin: '50px 20px' }}>Submit</button>
+                          borderRadius: '12px', color: '#FFFFFF', fontSize: '20px', border: 'none', margin: '20px 0 0 0' }}>Submit</button>
                     </div>
                   </div>
                 </Modal>

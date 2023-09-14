@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {Link} from 'react-router-dom'
 import { MdOutlineHolidayVillage, MdMenu, MdOutlineFavoriteBorder, MdMailOutline, MdPostAdd } from 'react-icons/md';
 import Modal from 'react-modal';
 import './Header.css'; // Import your CSS file
@@ -37,7 +38,7 @@ function Header() {
 
       {/* Show the contact us and shortlist buttons on desktop screens */}
       <div className={`header-buttons  ${showMobileMenu ? 'hide-on-desktop' : ''}`}>
-        <a><MdOutlineFavoriteBorder /> Shortlist</a>
+        <Link to='/shortlist'><MdOutlineFavoriteBorder /> Shortlist</Link>
         <a onClick={() => setIsOpen(true)}><MdMailOutline /> Contact Us</a>
       </div>
 
@@ -88,12 +89,13 @@ function Header() {
               <input type='text' placeholder='Enter your message'
                 style={{ height: '184px' }} />
             </div>
-            <button className='contact-us-modal-close-btn' onClick={() => setIsOpen(false)}
+
+          </div>
+          <button className='contact-us-modal-close-btn' onClick={() => setIsOpen(false)}
               style={{
                 height: '56px', backgroundColor: 'rgba(58, 82, 149, 1)',
                 borderRadius: '12px', color: '#FFFFFF', fontSize: '20px', border: 'none', margin: '0 9px'
-              }}>Close</button>
-          </div>
+                }}>Close</button>
         </div>
       </Modal>
     </div>

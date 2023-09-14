@@ -152,6 +152,7 @@
   .contact-us-modal-input-right {
     width: 100%;
   }
+  
     .contact-us-modal-input input {
       height: 56px;
       width: 90%;
@@ -163,6 +164,10 @@
     .mobile-menu-icon {
       display: block;
     }
+
+    .contact-us-modal-close-btn  {
+      width: 538px;
+      padding: 0;
   }
   
   @media screen and (max-width: 600px) {
