@@ -40,19 +40,17 @@ h1, h2 {
   }
   
   .property-address h2 {
-    /* Add any desired styling for the address */
   }
   
   .property-price {
     display: flex;
-    flex-wrap: wrap; /* Allow flex items to wrap to the next line */
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
-    gap: 20px; /* Add spacing between info blocks */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
     padding: 40px 40px 0 0px;
   }
   
-  /* Adjust width and margins as needed */
   .property-info .info-block {
     width: 180px;
     text-align: center;
@@ -62,7 +60,7 @@ h1, h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%; /* Adjust as needed */
+    width: 50%;
     align-items: start;
   }
   
@@ -138,24 +136,21 @@ h1, h2 {
   .bedroom-price {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Align items vertically */
-    padding: 24px 24px; /* Add padding for better spacing */
+    align-items: center;
+    padding: 24px 24px;
   
-    /* Add top border and border-radius for the first bedroom */
     &:first-child {
       border: 1px solid #ccc;
       border-top-left-radius: 24px;
       border-top-right-radius: 24px;
     }
   
-    /* Add bottom border and border-radius for the last bedroom */
     &:last-child {
       border-bottom: 1px solid #ccc;
       border-bottom-left-radius: 24px;
       border-bottom-right-radius: 24px;
     }
   
-    /* Add border between bedrooms */
     + .bedroom-price {
       border-bottom: solid #ccc;
       border-right: solid #ccc;
@@ -165,13 +160,13 @@ h1, h2 {
   }
   
   .bedroom-price p {
-    margin: 0; /* Remove default margin to avoid extra spacing */
+    margin: 0;
   }
   
   .key-features-container {
     height: auto;
     width: 500px;
-    margin-top: 74px; /* Adjust the top margin as needed */
+    margin-top: 74px;
   }
   
   .home-description-bedrooms-container {
@@ -224,7 +219,6 @@ h1, h2 {
     width: 400px;
   }
   
-  /* Media queries for tablet screens */
   @media screen and (max-width: 1000px) {
     .property-details {
       flex-direction: column;
@@ -267,7 +261,6 @@ h1, h2 {
     
   }
   
-  /* Media queries for mobile screens */
   @media screen and (max-width: 600px) {
   
     .property-price {

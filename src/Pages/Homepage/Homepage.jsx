@@ -9,7 +9,7 @@ import {
   MdOutlineRealEstateAgent,
 } from 'react-icons/md';
 import { IoMdHeartEmpty } from 'react-icons/io';
-import MyImage from '../../../src/assets/Rectangle 6.png'; // Import the image
+import MyImage from '../../../src/assets/Rectangle 6.png';
 
 import './Homepage.css';
 import KeepInTouch from '../../Components/KeepInTouch/KeepInTouch';
@@ -20,7 +20,6 @@ function Homepage( ) {
   const [cities, setCities] = useState([]);
   const [clickedCityName, setClickedCityName] = useState('');
   const handleCityClick = (_id) => {
-    // Do something with the clicked city name
     console.log('Clicked city:', _id);
     setClickedCityName(_id);
   };
@@ -29,24 +28,20 @@ function Homepage( ) {
     axios
       .get(`${import.meta.env.VITE_APP_BASE_URL}cities`)
       .then((res) => {
-        console.log(res.data.response.name); // Just for debugging, remove this line if not needed
-        setCities(res.data.response); // Update the cities state with the array of cities
-        console.log(cities);
+        console.log(res.data.response.name); 
+        setCities(res.data.response);
         console.log(res.data);
       })
       .catch((err) => console.log(err));
   }, []);
 
   const handleCityChange = (selectedCity) => {
-    // Do something with the selected city object, including its _id
     if (selectedCity) {
       console.log('Selected city ID:', selectedCity._id);
       
-      // Make your API call here using the selected city ID
       axios
         .get(`${import.meta.env.VITE_APP_BASE_URL}cities/${selectedCity._id}`)
         .then((res) => {
-          // Handle the API response here
           console.log('API Response:', res.data);
         })
         .catch((err) => {

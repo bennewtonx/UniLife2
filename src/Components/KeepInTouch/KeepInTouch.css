@@ -1,4 +1,3 @@
-/* Default styles for desktop */
 .keep-in-touch-container {
     height: 374px;
     background-color: #00A2E1;
@@ -45,109 +44,107 @@
     height: 206px;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center the content horizontally */
+    justify-content: center;
   }
   
   .lets-socialize h1 {
     font-size: 36px;
     font-weight: 500;
     color: #FFFFFF;
-    margin-bottom: 10px; /* Add some spacing between h1 and social icons */
+    margin-bottom: 10px;
   }
   
   .lets-socialize a {
     color: #FFFFFF;
-    text-align: center; /* Center the text inside .lets-socialize */
+    text-align: center; 
     text-decoration: none;
   }
   
   .lets-socialize .social-icon {
     display: flex;
-    align-items: center; /* Align icon and text vertically */
-    margin-bottom: 10px; /* Add some spacing between social icons */
+    align-items: center; 
+    margin-bottom: 10px; 
   }
   
   .lets-socialize .social-icon a {
-    margin-left: 10px; /* Add some spacing between icon and text */
+    margin-left: 10px; 
   }
   
-  /* Media query for tablets */
   @media screen and (max-width: 768px) {
     .keep-in-touch-container {
-      height: auto; /* Adjust height as needed for tablets */
-      flex-direction: column; /* Stack elements vertically */
+      height: auto; 
+      flex-direction: column;
       justify-content: center;
       align-items: center;
     }
   
     .keep-in-touch {
-      width: 100%; /* Expand width to fit the screen */
-      text-align: center; /* Center-align content */
-      margin-top: 20px; /* Add some spacing from the top */
+      width: 100%;
+      text-align: center;
+      margin-top: 20px; 
       margin-bottom: 20px;
     }
 
     .keep-in-touch h1{
-        text-align: center; /* Center-align content */
+        text-align: center; 
       }
 
       .keep-in-touch a{
-        text-align: center; /* Center-align content */
+        text-align: center; 
       }
   
     .keep-in-touch input {
-      width: 80%; /* Reduce input width for tablets */
+      width: 80%; 
     }
   
     .lets-socialize {
-      height: auto; /* Adjust height as needed for tablets */
-      text-align: center; /* Center-align content */
-      margin-top: 20px; /* Add some spacing from the top */
+      height: auto; 
+      text-align: center; 
+      margin-top: 20px; 
       margin-bottom: 20px;
     }
   
     .lets-socialize .social-icon {
-      margin-bottom: 10px; /* Add more spacing between social icons */
+      margin-bottom: 10px;
     }
   }
   
-  /* Media query for mobile devices */
   @media screen and (max-width: 600px) {
     .keep-in-touch-container {
-      height: auto; /* Adjust height as needed for mobile devices */
-      flex-direction: column; /* Stack elements vertically */
+      height: auto;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
     }
   
     .keep-in-touch {
-      width: 100%; /* Expand width to fit the screen */
-      text-align: center; /* Center-align content */
-      margin-top: 20px; /* Add some spacing from the top */
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
       margin-bottom: 40px;
     }
 
     .keep-in-touch h1{
-        text-align: center; /* Center-align content */
+        text-align: center;
       }
 
       .keep-in-touch a{
         font-size: 20px;
-        text-align: center; /* Center-align content */
+        text-align: center;
       }
   
     .keep-in-touch input {
-      width: 80%; /* Reduce input width for mobile devices */
+      width: 80%;
     }
   
     .lets-socialize {
-      height: auto; /* Adjust height as needed for mobile devices */
-      text-align: center; /* Center-align content */
-      margin-top: 20px; /* Add some spacing from the top */
+      height: auto;
+      text-align: center;
+      margin-top: 20px;
     }
     .lets-socialize p{
         font-size: 20px;
-        text-align: center; /* Center-align content */
+        text-align: center;
       }
 
     .social-icon {

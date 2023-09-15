@@ -17,7 +17,6 @@ function Shortlist() {
 <div className='shortlist-container'>
 <h1>Your Shortlisted Properties</h1>
 <div className="property-card-container">
-          {/* Display information for each property */}
           {shortlist &&
             shortlist.map((property) => (
               <div key={property._id} className="property-card">

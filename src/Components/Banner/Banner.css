@@ -34,19 +34,6 @@
     line-height:36px;
 
   }
-
-
-  @media (max-width: 1000px) {
-    .banner-text h1 {
-      font-size: 40px;
-      padding: 34px 70px 0 70px;
-    }
-  
-    .banner-text p {
-      font-size: 3vh;
-      padding: 0 10vh;
-    }
-  }
   
   @media (max-width: 600px) {
 
@@ -140,6 +127,16 @@
 
 
 @media (max-width: 1000px) {
+
+  .banner-text h1 {
+    font-size: 40px;
+    padding: 34px 70px 0 70px;
+  }
+
+  .banner-text p {
+    font-size: 3vh;
+    padding: 0 10vh;
+  }
     .banner-search {
       height: 96px;
       width: 80%;

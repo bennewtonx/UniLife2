@@ -9,8 +9,7 @@ import Banner from '../../Components/Banner/Banner';
 
 function SeeAllCities(handleCityClick) {
   const [seeAllCities, setSeeAllCities] = useState([]);
-  const [mounted, setMounted] = useState(true); // Flag to track component mount status
-
+  const [mounted, setMounted] = useState(true); 
   useEffect(() => {
     const fetchAllCities = async () => {
       try {
@@ -27,7 +26,7 @@ function SeeAllCities(handleCityClick) {
           const cities = response.data.response;
 
           if (cities.length === 0) {
-            break; // No more pages, break the loop
+            break; 
           }
 
           allCities = [...allCities, ...cities];
@@ -45,7 +44,6 @@ function SeeAllCities(handleCityClick) {
     fetchAllCities();
 
     return () => {
-      // Cleanup function to set the mounted flag to false on component unmount
       setMounted(false);
     };
   }, [mounted]);

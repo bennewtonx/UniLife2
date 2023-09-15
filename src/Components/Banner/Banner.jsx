@@ -37,8 +37,7 @@ function Banner( {page, filters, updateFilters, query, city, onCityChange } ) {
         axios
           .get(`${import.meta.env.VITE_APP_BASE_URL}cities`)
           .then((res) => {
-            console.log('yes', res.data.response.name); // Just for debugging, remove this line if not needed
-            setCities(res.data.response); // Update the cities state with the array of cities
+            setCities(res.data.response);
             console.log(cities);
             console.log(res.data);
           })
@@ -46,14 +45,12 @@ function Banner( {page, filters, updateFilters, query, city, onCityChange } ) {
       }, []);
 
       const handleCityChange = (event) => {
-        const selectedCityId = event.target.value; // Get the selected city ID
+        const selectedCityId = event.target.value;
         setSelectedCity(selectedCityId);
       
-        // Find the selected city object in the cities array
         const selectedCity = cities.find((city) => city._id === selectedCityId);
         console.log('ss', selectedCityId)
       
-        // Call the parent callback function to handle city selection with the city object
         if (onCityChange) {
           onCityChange(selectedCity);
         }
@@ -131,7 +128,7 @@ function Banner( {page, filters, updateFilters, query, city, onCityChange } ) {
     Search by city
   </option>
   {cities.map((city) => (
-    <option key={city._id} value={city._id}> {/* Set the value to city._id */}
+    <option key={city._id} value={city._id}>
       {city.name}
     </option>
   ))}
@@ -144,7 +141,6 @@ function Banner( {page, filters, updateFilters, query, city, onCityChange } ) {
     );
     
       } else if (page === 'properties/city/') {
-        // Customize text for the search page
         title = 'Search Accomodation'
         description = 'Whatever you`re after, we can help you find the right student accommodation for you.'
         search = '';
@@ -152,7 +148,6 @@ function Banner( {page, filters, updateFilters, query, city, onCityChange } ) {
         bannerClassName = 'banner-search banner-city';
 
       } else if (page === 'seeallcities') {
-        // Customize text for the search page
         title = 'Student Accomodation'
         description = 'UniLife have student accommodation available across the UK. Whatever you`re after, we can help you find the right student accommodation for you.'
         

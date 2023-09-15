@@ -22,7 +22,6 @@ function HomeDetailsPage({ clickedCityName }) {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Function to switch the main image when a side image is clicked
   const switchMainImage = (index) => {
     setCurrentImageIndex(index);
   };
@@ -53,7 +52,6 @@ function HomeDetailsPage({ clickedCityName }) {
   };
 
   useEffect(() => {
-    // Call API to get data
     axios.get(`${import.meta.env.VITE_APP_BASE_URL}properties/${propertyId}`)
       .then(res => {
         setProperty(res.data);

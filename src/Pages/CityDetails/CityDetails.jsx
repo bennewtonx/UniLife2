@@ -14,7 +14,7 @@ function CityDetails({ selectedBedroom, selectedBathroom, selectedPrice, selecte
   const { cityId } = useParams();
   const [specificCity, setSpecificCity] = useState([]);
   const [studentLife, setStudentLife] = useState('');
-  const [selectedCityId, setSelectedCityId] = useState(cityId); // Initialize with the cityId from the URL
+  const [selectedCityId, setSelectedCityId] = useState(cityId);
   const { response } = specificCity;
 
 
@@ -42,13 +42,11 @@ function CityDetails({ selectedBedroom, selectedBathroom, selectedPrice, selecte
   });
   
 
-  // Function to update the filters when values change in Banner
   const updateFiltersFromBanner = (newFilters) => {
     setFilters(newFilters);
   };
 
   useEffect(() => {
-    // Call API to get data
     axios
       .get(`${import.meta.env.VITE_APP_BASE_URL}properties/city/${selectedCityId}}`)
       .then((res) => {
@@ -65,17 +63,14 @@ function CityDetails({ selectedBedroom, selectedBathroom, selectedPrice, selecte
   }, [cityId]);
 
   useEffect(() => {
-    // This will run whenever any of the filter values change
     fetchFilters();
-  }, [filters]); // Include filters in the dependency array
+  }, [filters]);
 
   const fetchFilters = async () => {
     try {
-      // Use the 'filters' state to make the API request
       const res = await axios.post(`${import.meta.env.VITE_APP_BASE_URL}properties/filter`, filters);
       console.log(res.data);
 
-      // Update specificCity with filtered data
       setSpecificCity(res.data);
     } catch (err) {
       console.log(err);
@@ -101,7 +96,6 @@ function CityDetails({ selectedBedroom, selectedBathroom, selectedPrice, selecte
         <h1>{specificCity.total} homes in {specificCity.city_name}</h1>
       </div>
         <div className="property-card-container">
-          {/* Display information for each property */}
           {response &&
             response.map((property) => (
               <div key={property._id} className="property-card">

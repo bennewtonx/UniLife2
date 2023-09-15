@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {Link} from 'react-router-dom'
 import { MdOutlineHolidayVillage, MdMenu, MdOutlineFavoriteBorder, MdMailOutline, MdPostAdd } from 'react-icons/md';
 import Modal from 'react-modal';
-import './Header.css'; // Import your CSS file
+import './Header.css';
 
 Modal.setAppElement(document.getElementById('root'));
 
@@ -36,13 +36,11 @@ function Header() {
         <a href={'/'}>UniLife</a>
       </div>
 
-      {/* Show the contact us and shortlist buttons on desktop screens */}
       <div className={`header-buttons  ${showMobileMenu ? 'hide-on-desktop' : ''}`}>
         <Link to='/shortlist'><MdOutlineFavoriteBorder /> Shortlist</Link>
         <a onClick={() => setIsOpen(true)}><MdMailOutline /> Contact Us</a>
       </div>
 
-            {/* Show the hamburger menu on mobile screens */}
             <div className={`mobile-menu-icon ${showMobileMenu ? 'true' : ''}`} onClick={() => setShowMobileMenu(!showMobileMenu)}>
         <MdMenu />
       </div>
